@@ -1,0 +1,908 @@
+{
+	"info": {
+		"_postman_id": "1c09425a-72e5-499a-9d51-3d40023c66d3",
+		"name": "Fake-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30030174"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Search All",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/category",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"category"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "CATEGORIA4",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/category/1",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"category",
+										"1"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Poetry\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/category",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Categoria6 actualizada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/category/2",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"category",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/category/1",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"category",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Genre",
+					"item": [
+						{
+							"name": "Search All",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/genre?keyword=mystery",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"genre"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "ADVENTURE",
+											"disabled": true
+										},
+										{
+											"key": "keyword",
+											"value": "mystery"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/genre/",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"genre",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"tomiputo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/genre",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"genre"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Historical Fiction\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/genre/6",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"genre",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/genre/",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"genre",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Author",
+					"item": [
+						{
+							"name": "Search All",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/author",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"author"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "CATEGORIA4",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/author/1",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"author",
+										"1"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Gabriel\",\r\n    \"GenreId\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/author",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"author"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Categoria6 actualizada\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/author/2",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"author",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/author/1",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"author",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User Type",
+					"item": [
+						{
+							"name": "Search All",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/user_type",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"user_type"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "admin",
+											"disabled": true
+										},
+										{
+											"key": "keyword",
+											"value": "admin",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/user_type/1",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"user_type",
+										"1"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Non User\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/user_type",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"user_type"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Robot\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/user_type/3",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"user_type",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/user_type/3",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"user_type",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Search All",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/user",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "admin",
+											"disabled": true
+										},
+										{
+											"key": "UserTypeId",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "algo@algo.com",
+											"disabled": true
+										},
+										{
+											"key": "keyword",
+											"value": "admin",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/user/89d57433-2bd8-4114-9dd8-8c0da47867a4",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"user",
+										"89d57433-2bd8-4114-9dd8-8c0da47867a4"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"usuario\",\r\n    \"UserTypeId\": 2,\r\n    \"password\": \"abcd1234\",\r\n    \"profilePic\": \"https://png.pngtree.com/background/20230612/original/pngtree-wolf-animals-images-wallpaper-for-pc-384x480-picture-image_3180467.jpg\",\r\n    \"email\": \"usuario@algo.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/user",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Franco Sueldo\",\r\n    \"password\": \"abc1234\",\r\n    \"email\": \"sueldofranco@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/user/afc6196c-ebc1-41f0-952c-e8514ad0ec63",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"user",
+										"afc6196c-ebc1-41f0-952c-e8514ad0ec63"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/user/e62d1e87-93ef-42f8-a287-c53c3f68c812",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"user",
+										"e62d1e87-93ef-42f8-a287-c53c3f68c812"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Search All",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/product?name=Love in the Time of Cholera",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "UserTypeId",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "algo@algo.com",
+											"disabled": true
+										},
+										{
+											"key": "keyword",
+											"value": "admin",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "Love in the Time of Cholera"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/product",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"usuario\",\r\n    \"UserTypeId\": 2,\r\n    \"password\": \"abcd1234\",\r\n    \"profilePic\": \"https://png.pngtree.com/background/20230612/original/pngtree-wolf-animals-images-wallpaper-for-pc-384x480-picture-image_3180467.jpg\",\r\n    \"email\": \"usuario@algo.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/product",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Franco Sueldo\",\r\n    \"password\": \"abc1234\",\r\n    \"email\": \"sueldofranco@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{dominio}}/product",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dominio}}/product",
+									"host": [
+										"{{dominio}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "dominio",
+			"value": "http://localhost:3000"
+		}
+	]
+}

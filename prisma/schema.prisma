@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+model User {
+  id                  String        @id @default(uuid())
+  name                String
+  email               String        @unique()
+  password            String  
+  profilePic          String?
+  isActive            Boolean       @default(false)
+  isDelete            Boolean       @default(false)
+  createdAt           DateTime      @default(now())
+  updatedAt           DateTime      @default(now())
+  UserTypeId          Int
+
+  //Relations
+  user_type           User_type     @relation(fields: [UserTypeId], references: [id])
+}
+
+model User_type {
+    id                Int           @id @default(autoincrement())
+    name              String        @unique()
+
+    //Relations
+    user              User[]
+}
+
+model Product {
+  id                  Int           @id @default(autoincrement())
+  name                String
+  amount              Int
+  AuthorId            Int
+  CategoryId          Int
+  createdAt           DateTime      @default(now())
+  description         String
+  price               Float
+  image               String
+  available           Boolean       @default(false)
+
+  //Relations
+  author              Author        @relation(fields: [AuthorId], references: [id])
+  category            Category      @relation(fields: [CategoryId], references: [id])
+}
+
+model Author {
+  id                  Int           @id @default(autoincrement())
+  name                String 
+  GenreId             Int
+
+  //Relations
+  genre               Genre         @relation(fields: [GenreId], references: [id])
+  product             Product[]
+}
+
+model Genre {
+  id                  Int           @id @default(autoincrement())
+  name                String
+
+  //Relations
+  author              Author[]
+}
+
+model Category {
+  id                  Int           @id @default(autoincrement())
+  name                String
+
+  //Relations
+  product             Product[]
+}
