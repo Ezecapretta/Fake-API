@@ -12,11 +12,14 @@ import {
   SearchIdProductDTO,
   CreateProductDTO,
   UpdateProductDTO,
+  GetProductDTO,
 } from './dto/product';
 
+// const { id, name, price, amount, AuthorId, CategoryId, skip, take } =
+//   await validateAndCreate(data, GetProductDTO);
 export const getAllProducts: RequestHandler = async (req, res) => {
   try {
-    const { id, name, price, amount, AuthorId, CategoryId, page, limit } =
+    const { id, name, price, amount, AuthorId, CategoryId, page, take } =
       req.query;
     const response = await getAllProductsFromDB(
       id as string,
@@ -25,13 +28,13 @@ export const getAllProducts: RequestHandler = async (req, res) => {
       CategoryId as string,
       amount as string,
       price as string,
-      page as string,
-      limit as string,
+      page as any,
+      take as any,
     );
     return res.status(200).json({
       response,
       currentPage: page,
-      perPage: limit,
+      perPage: take,
     });
   } catch (error) {
     handleErrorResponse(res, error);

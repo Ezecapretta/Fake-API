@@ -10,10 +10,11 @@ export const getAllProductsFromDB = async (
   amount?: string,
   price?: string,
   keyword?: string,
-  page?: string,
-  limits?: string,
+  take: number = 5,
+  page: number = 4,
 ) => {
   try {
+    const skip = (page - 1) * take;
     const products = await prisma.product.findMany({
       where: {
         ...(id && { id: +id }),
@@ -42,6 +43,8 @@ export const getAllProductsFromDB = async (
           ],
         }),
       },
+      skip: skip,
+      take: take,
       include: {
         author: {
           select: {
