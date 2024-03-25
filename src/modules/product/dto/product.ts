@@ -16,7 +16,49 @@ class BaseProductDTO {
   amount!: number;
 }
 
-export class SearchIdProductDTO extends BaseProductDTO {
+export class GetProductDTO {
+  @IsOptional()
+  @IsString()
+  id?: string;
+
+  @IsNotEmpty()
+  @IsString()
+  name!: string;
+
+  @IsNotEmpty()
+  @IsString()
+  amount!: string;
+
+  @IsOptional()
+  @IsString()
+  AuthorId?: string;
+
+  @IsOptional()
+  @IsString()
+  CategoryId?: string;
+
+  @IsOptional()
+  @IsString()
+  description?: string;
+
+  @IsOptional()
+  @IsString()
+  price?: string;
+
+  @IsOptional()
+  @IsNumber()
+  page?: number;
+
+  @IsOptional()
+  @IsNumber()
+  limit?: number;
+
+  @IsOptional()
+  @IsString()
+  keyword?: string;
+}
+
+export class SearchIdProductDTO {
   @IsNotEmpty()
   @IsString()
   id!: string;
